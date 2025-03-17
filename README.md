@@ -1,4 +1,4 @@
-небольшое изменение  
+✨
 <header>
 
 # Hello GitHub Actions
