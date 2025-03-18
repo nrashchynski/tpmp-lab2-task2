@@ -1,4 +1,6 @@
-✨
+✨  
+# Hello GitHub Actions 👋
+This is a simple repository to learn GitHub Actions.
 <header>
 
 # Hello GitHub Actions
