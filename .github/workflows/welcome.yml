@@ -1,17 +1,15 @@
-name: Post welcome comment
+name: Hello GitHub Actions
+
 on:
   pull_request:
-    types: [opened]
-permissions:
-  pull-requests: write
+    branches:
+      - main
+
 jobs:
-  build:
-    name: Post welcome comment
+  hello:
     runs-on: ubuntu-latest
-welcome-workflow
     steps:
-      - run: gh pr comment $PR_URL --body "Welcome to the repository!"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_URL: ${{ github.event.pull_request.html_url }}
-main
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "Hello, GitHub Actions!"
